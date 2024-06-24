@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
     fun updateWebViewSize(height: Int) {
         if (webView != null) {
             val density = this.resources.displayMetrics.density
-            val dp = height * density
+            val px = height * density
             val params = webView!!.layoutParams
-            params.height = dp.toInt()
+            params.height = px.toInt()
             webView!!.layoutParams = params
         }
 
