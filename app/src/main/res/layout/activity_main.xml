@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo ipsum scelerisque, elementum metus tincidunt, volutpat est. Ut ut nisl semper, sagittis erat id, posuere sapien. Pellentesque sollicitudin sapien sit amet libero mattis, ac rutrum velit lobortis. Mauris congue vehicula augue non congue. Phasellus magna eros, semper vel maximus nec, tincidunt ut mi. Morbi quis nunc massa. Nullam sodales velit porta orci pulvinar condimentum. Pellentesque tincidunt tincidunt nulla, quis placerat ligula sollicitudin quis." />
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proin ultrices mollis dolor, eget blandit orci tempor nec. Sed pharetra quis felis vitae lobortis. Aenean suscipit, urna at efficitur ultricies, tellus nunc rutrum metus, quis pharetra nibh leo at mi. Suspendisse commodo magna erat, a maximus nisl tristique sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer lobortis, nisl ac aliquet consequat, nisl ipsum dapibus mauris, sed efficitur lacus orci nec metus. Donec commodo ullamcorper quam vitae finibus. Nulla facilisi. Phasellus et rutrum dolor. Proin non malesuada dui, hendrerit dictum mauris.&#xA;&#xA;" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
