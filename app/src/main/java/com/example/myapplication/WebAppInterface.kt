@@ -10,7 +10,10 @@ import org.json.JSONObject
 
 class Response(json: String) : JSONObject(json) {
     val event: String? = this.optString("event")
-    val height: String? = this.optString("clientHeight")
+    val gender: String? = this.optString("gender")
+    val target: String? = this.optString("target")
+    val service: String? = this.optString("service")
+    val height: Int? = this.optInt("clientHeight")
 }
 
 class DynamicSizeGuideObject(private val context: Context) {
@@ -22,6 +25,11 @@ class DynamicSizeGuideObject(private val context: Context) {
         if (context is MainActivity && height != null && response.event == "resize") {
             context.runOnUiThread {
                 context.updateWebViewSize(height = height)
+            }
+        }
+        if (context is MainActivity && response.event == "profile:open") {
+            context.runOnUiThread {
+                context.handleProfileOpen()
             }
         }
     }

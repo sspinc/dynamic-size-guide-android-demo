@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         myWebView.addJavascriptInterface(DynamicSizeGuideObject(context = this),"SSP_MESSAGE_HANDLER")
 
         // Load a URL
-        myWebView.loadUrl("https://api.sspinc.io/sizeguide/mobile/webview.html?partner_key=walmart&domain_userid=5654345&webview.id=&product.id=4234324&product.brand=adidas&product.department=apparel&product.gender=male&product.sizes=&site.currency=&site.environment=dev&site.language=en&site.layout=&site.market=US&user.id=&user.email_hash=&page.type=pdp&mobile.platform=android&mobile.app_version=")
+        myWebView.loadUrl("https://api.sspinc.io/fitpredictor/profile/webview.html?partner_key=acme&gender=FEMALE&preview=true&user_id=user1&mobile_platform=ios&auth_token=acme:TZZ26YS1bW1DIVXzXp4yp-Yvu3x4WoqKXZfW2_7OHxE")
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -61,8 +61,11 @@ class MainActivity : AppCompatActivity() {
             params.height = px.toInt()
             webView!!.layoutParams = params
         }
+    }
 
-
+    fun handleProfileOpen() {
+        // Handle profile opening here
+        Log.v("SSP", "Opening fit profile");
     }
 
     fun Float.pxToDp(context: Context): Float =
